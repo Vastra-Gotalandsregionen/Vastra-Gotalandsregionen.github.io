@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Samlingssida 2.0: Självservice</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <meta name="robots" content="noindex">
+</head>
+<body>
+    <main class="container">
+        <h1>Samlingssida 2.0: Självservice</h1>
+        <p>Prototyp på hur vårdgivarna själva kan administrera det tjänsteutbud de exponerar till den kommande samlingssidan. Det här man som samordnare för en vårdgivare kan komplettera den masterdata samlingssidan hämtar via API:er från KiV, tidsbokningssystem, etc.</p>
+        <p>Vyer i prototypen:</p>
+        <ul>
+            <li><a href="#">Inloggning</a> (todo)</li>
+            <li><a href="#">Översikt vad den inloggade har behörighet att jobba med</a> (todo)</li>
+            <li><a href="#">Skapande/redigeringsformulär för en vårdmottagning/vaccinatör</a> (todo)</li>
+        </ul>
+        <h2>Masterdata</h2>
+        <p>Mappning av masterdata samlingssidan behöver eller nyttjar.</p>
+        <table>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Data</th>
+                <th scope="col">Beskrivning</th>
+                <th scope="col">Var finns den?</th>
+                <th scope="col">Kommentar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>HSAID</td>
+                <td>Unik identitet för en vårdgivare med avtal</td>
+                <td>HSA-katalogen, KiV</td>
+                <td>Behöver kopplas till användaren som loggar in hos oss.</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Mottagningens namn</td>
+                <td>...</td>
+                <td>...</td>
+                <td><em>Namn</em> som i hur det visas för invånarna för en specifik tjänst</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Namn på mottagningens <em>samordnare</em></td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Mejladress till mottagningens <em>samordnare</em></td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Mobilnummer till mottagningens <em>samordnare</em></td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+              </tr>
+            </tbody>
+          </table>
+    </main>
+</body>
+</html>
