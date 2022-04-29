@@ -2,14 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Samlingssida 2.0: Inloggning</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     <meta name="robots" content="noindex">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <!-- 
+        ██   ██ ███████      ██ ██ 
+        ██   ██ ██           ██ ██ 
+        ███████ █████        ██ ██ 
+        ██   ██ ██      ██   ██    
+        ██   ██ ███████  █████  ██ 
+                           
+        Kul att du är här och kollar vår kodkvalitet!
+        Kolla gärna också in vilka utvecklartjänster VGR söker efter just nu:
+        https://www.vgregion.se/jobba-i-vgr/sok-jobb-i-vgr/                   
+    -->
 </head>
 <body>
     <main class="container">
         <h1>Logga in för att hantera ert vårdutbud</h1>
-        <p></p>        
+        <form>
+
+          <!-- Grid -->
+          <div class="grid">
+        
+            <!-- Markup example 1: input is inside label -->
+            <label for="email">
+              E-postadress:
+              <input type="email" id="email" name="email" placeholder="Din e-postadress" required>
+            </label>
+        
+            <label for="password">
+              Lösenord:
+              <input type="password" id="password" name="password" placeholder="Ditt lösenord" required>
+              <small><a href="#">Glömt ditt lösenord?</a></small>
+            </label>
+          </div>
+          <!-- Button -->
+          <a href="2-oversikt.html" role="button">Logga in</a>
+        </form>
     </main>
 </body>
 </html>
