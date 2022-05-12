@@ -27,103 +27,18 @@
         <p>Vyer i prototypen:</p>
         <ul>
             <li><a href="1-inloggning.html">Inloggning</a></li>
-            <li><a href="2-intro.html">Välja mottagning att administrera</a> (work in progress)</li>
-            <li><a href="2-oversikt.html">Översikt vad den inloggade har behörighet att jobba med</a> (work in progress)</li>
-            <li><a href="3-redigera-skapa.html">Skapande/redigeringsformulär för en vårdmottagning/vaccinatör</a> (work in progress)</li>
+            <li><a href="2-oversikt.html">Startpunkt inne i adminverktyget</a> (översikt vad den inloggade har behörighet att jobba med)</li>
+            <li><a href="kontaktuppgifter.html">Redigera <em>kontaktuppgifter</em></a></li>
+            <li><a href="3-ny-tjanst.html">Lägg till <em>ny vårdtjänst</em></a></li>
+            <li><a href="3-redigera-skapa.html">Redigera <em>befintlig vårdtjänst</em> för en vårdmottagning/vaccinatör</a></li>
         </ul>
         <hr>
-        <h2>Masterdata</h2>
-        <p>Mappning av masterdata samlingssidan behöver eller nyttjar.</p>
-        <table>
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Data</th>
-                <th scope="col">Beskrivning</th>
-                <th scope="col">Var finns den?</th>
-                <th scope="col">Kommentar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>HSAID</td>
-                <td>Unik identitet för en vårdgivare med avtal</td>
-                <td>HSA-katalogen, KiV</td>
-                <td>Behöver kopplas till användaren som loggar in hos oss.</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Mottagningens namn</td>
-                <td>...</td>
-                <td>...</td>
-                <td><em>Namn</em> som i hur det visas för invånarna för en specifik tjänst</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Namn på mottagningens <em>samordnare</em></td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Mejladress till mottagningens <em>samordnare</em></td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Mobilnummer till mottagningens <em>samordnare</em></td>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Lista med utbud för vårdmottagningen</td>
-                <td>En koppling mellan <em>tidstyp</em> och hur det visas</td>
-                <td>I vår egeninsamlade masterdata</td>
-                <td>...</td>
-              </tr>
-              <tr>
-                <th scope="row">7</th>
-                <td>URL för deras API endpoint</td>
-                <td>En adress till deras web-API</td>
-                <td>I vår egeninsamlade masterdata</td>
-                <td>Det här är för vår integration mot deras tidbok.</td>
-              </tr>
-              <tr>
-                <th scope="row">8</th>
-                <td>URL för kontaktkort på 1177.se</td>
-                <td>...</td>
-                <td>I vår egeninsamlade masterdata</td>
-                <td>För invånaren att hitta länk till deras plats på 1177.se</td>
-              </tr>
-              <tr>
-                <th scope="row">9</th>
-                <td>URL för tidsbokning (potentiellt en för varje sorts tjänst/utbud)</td>
-                <td>...</td>
-                <td>I vår egeninsamlade masterdata</td>
-                <td>För invånaren att gå direkt mot tidsbokning</td>
-              </tr>
-              <tr>
-                <th scope="row">10</th>
-                <td>Valfri: URL för dropin-info (potentiellt en för varje sorts tjänst/utbud)</td>
-                <td>...</td>
-                <td>I vår egeninsamlade masterdata</td>
-                <td>För invånaren att hitta detaljer om möjligheten med dropin</td>
-              </tr>
-              <tr>
-                <th scope="row">11</th>
-                <td>Valfri: Strukturerad data om dropin-tider (potentiellt en för varje sorts tjänst/utbud)</td>
-                <td>...</td>
-                <td>I vår egeninsamlade masterdata</td>
-                <td>Följa webbstandarden <a href="https://schema.org/openingHours">openingHours</a> för vilka data vi samlar in?</td>
-              </tr>
-            </tbody>
-          </table>
+        <h2>Work in progress</h2>
+        <ul>
+<li>Öppettider för dropin</li>
+<li>Byta till intern namngivning av vårdstjänster - stryka Ineras - och lägga till HPV, blodgivning, MVC, UVC</li>
+<li>Kontaktuppgifter till utvecklare / IT-samordnare för API-frågor</li>
+        </ul>
     </main>
 </body>
 </html>

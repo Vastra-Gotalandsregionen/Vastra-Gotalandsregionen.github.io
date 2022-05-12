@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Samlingssida 2.0: Skapa</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- 
+    ██   ██ ███████      ██ ██ 
+    ██   ██ ██           ██ ██ 
+    ███████ █████        ██ ██ 
+    ██   ██ ██      ██   ██    
+    ██   ██ ███████  █████  ██ 
+    
+    Kul att du är här och kollar vår kodkvalitet!
+    Kolla gärna också in vilka utvecklartjänster VGR söker efter just nu:
+    https://www.vgregion.se/jobba-i-vgr/sok-jobb-i-vgr/                   
+  -->
+</head>
+<body>
+  <main class="container">
+    <h1>Lägga till ny vårdtjänst</h1>
+    <p>Nedan formulär hjälper dig att påbörja processen att få med en ny vårdtjänst till VGR:s samlingssida.</p>
+    
+    <form>
+      <h2>Vilken typ av vårdtjänst handlar det om?</h2>
+      <p>"Fikonspråket" nedan i utbudet kommer från <a href="https://www.inera.se/tjanster/alla-tjanster-a-o/utbudstjansten/">Ineras utbudstjänst / kodverk</a></p>
+      <!-- Select -->
+      <label for="vardtjans">Vårdtjänst</label>
+      <select id="vardtjanst" required>
+        <option value="" selected>Välj tjänst ur Ineras utbudstjänst…</option>
+        <option>Allmänmedicinsk konsultation</option>
+        <option>Vaccination mot fästingburen virusencefalit (TBE)</option>
+        <option>Influensavaccination</option>
+        <option>Kognitiv beteendeterapi via internet</option>
+        <option>Interpersonell psykoterapi (IPT)</option>
+        <option>...</option>
+      </select>
+      <h2>Information till patient / invånare för denna vårdtjänst</h2>
+      <p>Saker som hjälper till att hitta fram till, eller få kontakt med, vårdtjänsten ni erbjuder.</p>
+      <div class="grid">
+        <label for="telbooking">
+          Telenr för tidsbokning:
+          <input type="tel" id="telbooking" name="telbooking" placeholder="Telenr för tidsbokning" required>
+        </label>
+        
+        <label for="urlbooking">
+          URL för tidsbokning:
+          <input type="text" id="urlbooking" name="urlbooking" placeholder="https://..." required>
+        </label>
+        
+      </div>
+      <div class="grid">
+        <label for="dropin">
+          <input type="checkbox" id="dropin" name="dropin" role="switch">
+          Erbjuder ni dropin?
+        </label>
+        
+        <label for="urldropin">
+          URL för info om dropin:
+          <input type="text" id="urldropin" name="urldropin" placeholder="https://..." required>
+        </label>
+        
+      </div>
+      <label for="geocoordinates">
+        Geografiska koordinater (enligt standard WGS84 decimal):
+        <input type="text" id="geocoordinates" name="geocoordinates" placeholder="57.712318, 11.973848" required>
+        <small><a href="http://latlong.mellifica.se/" target="_blank">Öppna hjälpverktyg för geoposition</a></small>
+      </label>
+      
+      <h2>Tekniska uppgifter</h2>
+      <p>Här är information om hur VGR integrerar er mot samlingssidan.</p>
+      
+      <label for="apiendpoint">URL till ert webb-API:</label>
+      <input type="email" id="apiendpoint" name="apiendpoint" placeholder="https://..." required>
+      
+      <!-- Button -->
+      <a href="2-oversikt.html" role="button">Spara</a>
+    </form>
+    <p style="margin-top: 3em;"><a href="index.html">&laquo; till start</a></p>
+  </main>
+</body>
+</html>

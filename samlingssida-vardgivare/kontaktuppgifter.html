@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Samlingssida 2.0: Ert vårdutbud</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <!-- 
+        ██   ██ ███████      ██ ██ 
+        ██   ██ ██           ██ ██ 
+        ███████ █████        ██ ██ 
+        ██   ██ ██      ██   ██    
+        ██   ██ ███████  █████  ██ 
+                           
+        Kul att du är här och kollar vår kodkvalitet!
+        Kolla gärna också in vilka utvecklartjänster VGR söker efter just nu:
+        https://www.vgregion.se/jobba-i-vgr/sok-jobb-i-vgr/                   
+    -->
+</head>
+<body>
+    <main class="container">
+        <h1>Era kontaktuppgifter</h1>
+     
+          <form>
+
+            <!-- Grid -->
+            <div class="grid">
+              <label for="orgname">
+                Vårdgivarens namn:
+                <input type="text" id="orgname" name="orgname" value="orgnamn AB/vårdgivaren" disabled>
+                <small>Hämtas från KiV</small>
+              </label>
+          
+              <label for="hsaid">
+                HSAID:
+                <input type="text" id="hsaid" name="hsaid" value="SE2371000061-xxxx" disabled>
+              </label>
+            </div>
+          
+            <h2>Kontaktuppgifter till samordnare för <em>orgnamn AB/vårdgivaren</em></h2>
+            <p>Dessa uppgifter är till för att VGR ska kunna komma i kontakt med rätt person hos er.</p>
+            <div class="grid">
+                <label for="firstname">
+                  Förnamn:
+                  <input type="text" id="firstname" name="firstname" placeholder="Förnamn" required>
+                </label>
+            
+                <label for="lastname">
+                  Efternamn:
+                  <input type="text" id="lastname" name="lastname" placeholder="Efternamn" required>
+                </label>
+            
+              </div>
+            <label for="email">Mejladress:</label>
+            <input type="email" id="email" name="email" placeholder="Mejladress" required>
+            <small>Det är ok med en funktionsbrevlåda</small>
+
+            <label for="coordphone">Telenummer:</label>
+            <input type="tel" id="coordphone" name="coordphone" placeholder="Telenummer" required>
+            <small>Det är ok med nummer till stafetttelefon</small>
+               <!-- Button -->
+            <a href="2-oversikt.html" role="button">Spara</a>
+            </form>
+
+          <p style="margin-top: 3em;"><a href="index.html">&laquo; till start</a></p>
+    </main>
+</body>
+</html>
