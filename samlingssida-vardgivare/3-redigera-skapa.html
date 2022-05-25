@@ -58,10 +58,19 @@
             </label>
 
             <h2>Tekniska uppgifter</h2>
-            <p>Här är information om hur VGR integrerar er mot samlingssidan.</p>
-
+            <p>Här är information om hur VGR integrerar er mot samlingssidan. Om ni använder något av de vanliga tidbokssystemen är det troligt att ni redan har de tekniska förutsättningarna klara.</p>
+            <!-- Select -->
+          <label for="tidboksleverantor">Vilket tidbokssystem använder ni?</label>
+          <select id="tidboksleverantor" required>
+            <option value="">Redan integrerade tidböcker</option>
+            <option selected>AsynjaVisph (Närhälsan, mfl)</option>
+            <option>CGM J4</option>
+            <option>WebDoc / Patient.nu / Evimeria</option>
+            <option>MittVaccin / Cambio</option>
+            <option>Inget av ovanstående alternativ (kräver att ni ger oss fler tekniska uppgifter)</option>
+          </select>
             <label for="apiendpoint">URL till ert webb-API:</label>
-            <input type="email" id="apiendpoint" name="apiendpoint" placeholder="https://..." required>
+            <input type="email" id="apiendpoint" name="apiendpoint" placeholder="https://..." disabled required>
           
             <!-- Button -->
             <a href="2-oversikt.html" role="button">Spara</a>
