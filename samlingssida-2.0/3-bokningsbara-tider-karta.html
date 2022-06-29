@@ -1300,7 +1300,7 @@
                         </li>
                         <li class="vgr-breadcrumbs__list-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                             <span class="vgr-breadcrumbs__list-link" itemprop="item">
-                                Vaccination covid-19 i Göteborg
+                                Karta för vaccination covid-19
                             </span>
                             <meta itemprop="position" content="2">
                         </li>
@@ -1313,82 +1313,320 @@
                             
                             
                             <h1 id="h1id">
-                                Prototyp: Vaccination covid-19
+                                Prototyp: Karta mottagningar vaccination covid-19
                             </h1>
                             
                             
                             <p class="vgr-lead ">
-                                Mottagningar som har lediga tider för bokning av vaccination just nu.<br><em>(I skarpt läge hamnar man inte i Göteborg.)</em><br>
-                                <a href="3-bokningsbara-tider-karta.html">Vill du hellre se mottagningar på en karta?</a>
+                                Mottagningar som har lediga tider för bokning av vaccination just nu. <br><em>(I skarpt läge hamnar man inte i Dalsland utan får en fråga om man kan tänka sig att dela sin plats, eller så får man navigera i kartan. För att testa liknande funktionalitet, <a href="https://www.vgregion.se/halsa-och-vard/barnmorskemottagning/hitta-mottagning/?municipalities=1460,1460,1461,1492,1438,1439&extended=True&careTypes=1505&position=58.99384691926115,12.465235742004273&organizationName=Regionh%c3%a4lsan&serviceParameters=filter=hsaDestinationIndicator:03&isSearch=True&filteredSearch=true&sort=Distance" target="_blank">kolla in denna sida (öppnas i nytt fönster)</a>)</em><br>
+                                <a href="3-bokningsbara-tider.html">Vill du hellre se mottagningar i en lista?</a>
                             </p>
-                            <div class="row content-area-wrapper"><div class="block display-option-66 mottagningbookabletimeslistblock">
-                                <div class="list-component">
-                                    <div id="react_0HMIOJHB2J9QN">
-                                        <form action="https://www.vgregion.se/ov/vaccinationstider/bokningsbara-tider/" method="get" class="vgr-itemlist" data-reactroot=""><div class="vgr-itemlist__filter-wrapper">
-                                            <label for="filter" class="vgr-visually-hidden">Filtrera på kommun</label>
-                                            <select autocomplete="off" id="filter" class="vgr-itemlist_filter" name="filter" aria-label="Filtrera på kommun" aria-controls="mottagning-count"><option value="0">Alla kommuner</option><option value="1440">Ale</option><option value="1489">Alingsås</option><option value="1460">Bengtsfors</option><option value="1490">Borås</option><option value="1438">Dals-Ed</option><option value="1499">Falköping</option><option value="1439">Färgelanda</option><option value="1480" selected>Göteborg</option><option value="1471">Götene</option><option value="1401">Härryda</option><option value="1482">Kungälv</option><option value="1441">Lerum</option><option value="1494">Lidköping</option><option value="1462">Lilla Edet</option><option value="1484">Lysekil</option><option value="1461">Mellerud</option><option value="1430">Munkedal</option><option value="1481">Mölndal</option><option value="1421">Orust</option><option value="1402">Partille</option><option value="1496">Skövde</option><option value="1427">Sotenäs</option><option value="1415">Stenungsund</option><option value="1486">Strömstad</option><option value="1435">Tanum</option><option value="1419">Tjörn</option><option value="1452">Tranemo</option><option value="1488">Trollhättan</option><option value="1473">Töreboda</option><option value="1491">Ulricehamn</option><option value="1487">Vänersborg</option><option value="1407">Öckerö</option>
-                                            </select>
-                                            <button type="submit" aria-label="Filtrera mottagningar inomBokningsbara tider" style="display: none;">Filtrera</button>
-
-                                            <label for="filter2" class="vgr-visually-hidden">Filtrera på stadsdel</label>
-                                            <select autocomplete="off" id="filter2" class="vgr-itemlist_filter" name="filter2" aria-controls="mottagning-count"><option value="Visa alla stadsdelar">Visa alla stadsdelar</option><option value="Lundby">Lundby</option><option value="Västra Hisingen">Västra Hisingen</option><option value="Angered">Angered</option><option value="Majorna-Linné">Majorna-Linné</option><option value="Centrum">Centrum</option><option value="Askim-Frölunda-Högsbo">Askim-Frölunda-Högsbo</option><option value="Norra Hisingen">Norra Hisingen</option><option value="Östra Göteborg">Östra Göteborg</option><option value="Västra Göteborg">Västra Göteborg</option><option value="Örgryte-Härlanda">Örgryte-Härlanda</option></select>
-
-                                            <label for="filter3" class="vgr-visually-hidden">Välj tidsperiod</label>
-                                            <select autocomplete="off" id="filter3" class="vgr-itemlist_filter" name="filter3" aria-controls="mottagning-count">
-                                                <option value="Välj tidsperiod">Välj tidsperiod</option>
-                                                <option value="4-veckor" selected>Kommande 4 veckor</option>
-                                                <option value="idag">Idag</option>
-                                                <option value="imorgon">Imorgon</option>
-                                                <option value="nästa vecka">Nästa vecka</option>
-                                                <option value="nästa månad">Nästa månad</option>
-                                                <option value="valfritt">Valfritt datumintervall</option>
-                                                
-                                            </select>
+                            <div class="row content-area-wrapper">
+                                <form action="https://www.vgregion.se/ov/vaccinationstider/bokningsbara-tider/" method="get" class="vgr-itemlist" data-reactroot=""></form>
+                                <div class="vgr-itemlist__filter-wrapper">
+                                    <label for="filter" class="vgr-visually-hidden">Filtrera på kommun</label>
+                                    <select autocomplete="off" id="filter" class="vgr-itemlist_filter" name="filter" aria-label="Filtrera på kommun" aria-controls="mottagning-count"><option value="0">Alla kommuner</option><option value="1440">Ale</option><option value="1489">Alingsås</option><option value="1460">Bengtsfors</option><option value="1490">Borås</option><option value="1438">Dals-Ed</option><option value="1499">Falköping</option><option value="1439">Färgelanda</option><option value="1480">Göteborg</option><option value="1471">Götene</option><option value="1401">Härryda</option><option value="1482">Kungälv</option><option value="1441">Lerum</option><option value="1494">Lidköping</option><option value="1462">Lilla Edet</option><option value="1484">Lysekil</option><option value="1461">Mellerud</option><option value="1430">Munkedal</option><option value="1481">Mölndal</option><option value="1421">Orust</option><option value="1402">Partille</option><option value="1496">Skövde</option><option value="1427">Sotenäs</option><option value="1415">Stenungsund</option><option value="1486">Strömstad</option><option value="1435">Tanum</option><option value="1419">Tjörn</option><option value="1452">Tranemo</option><option value="1488">Trollhättan</option><option value="1473">Töreboda</option><option value="1491">Ulricehamn</option><option value="1487">Vänersborg</option>
+                                        <option value="xxx" selected>Åmål</option>
+                                        <option value="1407">Öckerö</option>
+                                    </select>
                                     
+
+                                    <label for="filter3" class="vgr-visually-hidden">Välj tidsperiod</label>
+                                    <select autocomplete="off" id="filter3" class="vgr-itemlist_filter" name="filter3" aria-controls="mottagning-count">
+                                        <option value="Välj tidsperiod">Välj tidsperiod</option>
+                                        <option value="4-veckor">Kommande 4 veckor</option>
+                                        <option value="idag">Idag</option>
+                                        <option value="imorgon" selected>Imorgon</option>
+                                        <option value="nästa vecka">Nästa vecka</option>
+                                        <option value="nästa månad">Nästa månad</option>
+                                        <option value="valfritt">Valfritt datumintervall</option>
+                                        
+                                    </select>
+                            
+                            </div>
+                        </form>
+                                
+                                <div class="block display-option-66 organizationsearchresultblock">
+
+                                    <div class="vgr-search-result-wrapper">
+                                        <div class="vgr-search-details vgr-clearfix">
+                                            <div class="vgr-sort-results">
+                                                <p class="vgr-sort-results__headline">Sortera på:</p>
+                                                <ul class="vgr-sort-results__list">
+                                                                <li class="vgr-sort-results__item distance" data-selected="" aria-label="Aktiv">
+                                                                    Avstånd
+                                                                </li>
+                                                                </li>
+                                                                <li class="vgr-sort-results__item name">
+                                                                    <a class="vgr-sort-results__link" href="/Public/OrganizationSearchResultBlock/Sort?url=%2Fhalsa-och-vard%2Fbarnmorskemottagning%2Fhitta-mottagning%2F%3Fmunicipalities%3D1460%2C1460%2C1461%2C1492%2C1438%2C1439%26extended%3DTrue%26careTypes%3D1505%26position%3D58.99384691926115%2C12.465235742004273%26organizationName%3DRegionh%25c3%25a4lsan%26serviceParameters%3Dfilter%3DhsaDestinationIndicator%3A03%26isSearch%3DTrue%26filteredSearch%3Dtrue%26sort%3DDistance&amp;sortOrder=Name">Namn</a>
+                                                                </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                            <ul class="vgr-search-list">
+                                    <li class="vgr-search-list__item" data-id="sokikiv-avd_SE2321000131-E000000009098" data-name="Bengtsfors vaccinationsmottagning" data-url="#" data-address="Hittepågatan 7" data-phone="010 - xxx xx xx" data-coordinates-x="59.030484" data-coordinates-y="12.222391" itemscope="" itemtype="http://schema.org/LocalBusiness">
+                                        <h3 class="vgr-search-list__headline">
+                                            <a href="#">Bengtsfors vaccinationsmottagning</a>
+                                        </h3>
+                                        <p class="vgr-visually-hidden">Tillhandahåller:</p>
+                                        
+                                        <div class="vgr-search-list__meta">
+                                                <p>
+                                                    <span class="vgr-search-list__meta-label">Adress:</span>
+                                                    <span>Hittepågatan 7</span>,
+                                                    <span>666 30</span>
+                                                    <span>Bengtsfors</span>
+                            
+                                                </p>
+                                                    <p class="vgr-search-list__distance">
+                                                        <img class="vgr-icon" alt="" src="https://www.vgregion.se/Static/gfx/ic_place_black_24px.svg">
+                                                        14.4 <abbr title="kilometer">km</abbr>
+                                                    </p>
+                                            <a href="#" class="maplink">Visa på karta</a>
+                            
+                                                <p>
+                                                    <span class="vgr-search-list__meta-label">Telefonnummer:</span>
+                                                    <a href="tel:010 - xxx xx xx">010 - xxx xx xx</a>
+                                                </p>
+                                                                <div class="vgr-toggle vgr-search-list__current" data-togglestyle="slide">
+                                                    <span class="vgr-search-list__meta-label">Öppettider: </span>
+                                                    <button type="button" class="vgr-toggle vgr-toggle__button" data-tab="" aria-controls="6a95ff28-2851-4768-876d-c0b6295d9b15" aria-expanded="false" data-isexpanded="false">
+                                                        <span class="vgr-visually-hidden" data-showtext="Visa information om öppettider" data-hidetext="Dölj information om öppettider">Visa information om öppettider</span>
+                                                        <span aria-hidden="true" class="vgr-search-list__closed">
+                                                            Öppet till 16:00
+                                                        </span>
+                                                        <img src="https://www.vgregion.se/Static/gfx/ic_expand_more_black_24px.svg" alt="">
+                                                    </button>
+                            
+                                                    <div class="vgr-toggle__panel" data-panel="" id="7acc28f7-0470-4563-90f1-abd358707498" tabindex="-1" data-isexpanded="false">
+                                                        <dl>
+                                                                <dt>Måndag</dt>
+                                                                <dd>08:00 - 17:00</dd>
+                                                                <dt class="vgr-search-list__hours--today">Onsdag</dt>
+                                                                <dd class="vgr-search-list__hours--today">08:00 - 16:00</dd>
+                                                        </dl>
+                                                    </div>
+                            
+                                                </div>
+                                        </div>
+                                    </li>
+                                    <li class="vgr-search-list__item" data-id="sokikiv-avd_SE2321000131-E000000009102" data-name="Åmål vaccinationsmottagning" data-url="#" data-address="Nybrogatan 17" data-phone="010 - xxx xx xx" data-coordinates-x="59.048060" data-coordinates-y="12.704139" itemscope="" itemtype="http://schema.org/LocalBusiness">
+                                        <h3 class="vgr-search-list__headline">
+                                            <a href="http://www.vgregion.se/Amalbarnmorskemottagning">Åmål vaccinationsmottagning</a>
+                                        </h3>
+                                        <p class="vgr-visually-hidden">Tillhandahåller:</p>
+                                        
+                                        <div class="vgr-search-list__meta">
+                                                <p>
+                                                    <span class="vgr-search-list__meta-label">Adress:</span>
+                                                    <span>Hittepågatan 17</span>,
+                                                    <span>662 30</span>
+                                                    <span>Åmål</span>
+                            
+                                                </p>
+                                                    <p class="vgr-search-list__distance">
+                                                        <img class="vgr-icon" alt="" src="https://www.vgregion.se/Static/gfx/ic_place_black_24px.svg">
+                                                        14.9 <abbr title="kilometer">km</abbr>
+                                                    </p>
+                                            <a href="#" class="maplink">Visa på karta</a>
+                            
+                                                <p>
+                                                    <span class="vgr-search-list__meta-label">Telefonnummer:</span>
+                                                    <a href="tel:010 - xxx xx xx">010 - xxx xx xx</a>
+                                                </p>
+                                                                <div class="vgr-toggle vgr-search-list__current" data-togglestyle="slide">
+                                                    <span class="vgr-search-list__meta-label">Öppettider: </span>
+                                                    <button type="button" class="vgr-toggle vgr-toggle__button" data-tab="" aria-controls="a2ae504f-da5b-425d-b2b0-b53d5002f30c" aria-expanded="false" data-isexpanded="false">
+                                                        <span class="vgr-visually-hidden" data-showtext="Visa information om öppettider" data-hidetext="Dölj information om öppettider">Visa information om öppettider</span>
+                                                        <span aria-hidden="true">
+                                                            Öppet till 16:30
+                                                        </span>
+                                                        <img src="https://www.vgregion.se/Static/gfx/ic_expand_more_black_24px.svg" alt="">
+                                                    </button>
+                            
+                                                    <div class="vgr-toggle__panel" data-panel="" id="0c573eea-f3a8-4502-ab5a-58e77015fdc7" tabindex="-1" data-isexpanded="false">
+                                                        <dl>
+                                                                <dt>Måndag</dt>
+                                                                <dd>08:00 - 18:00</dd>
+                                                                <dt>Tisdag</dt>
+                                                                <dd>08:00 - 16:30</dd>
+                                                                <dt class="vgr-search-list__hours--today">Onsdag</dt>
+                                                                <dd class="vgr-search-list__hours--today">08:00 - 16:30</dd>
+                                                                <dt>Torsdag</dt>
+                                                                <dd>08:00 - 16:30</dd>
+                                                                <dt>Fredag</dt>
+                                                                <dd>08:30 - 13:00</dd>
+                                                        </dl>
+                                                    </div>
+                            
+                                                </div>
+                                        </div>
+                                    </li>
+                                    <li class="vgr-search-list__item" data-id="sokikiv-avd_SE2321000131-E000000009086" data-name="Dals-Ed vaccinationsmottagning" data-url="#" data-address="Storgatan 7" data-phone="010 - xxx xx xx" data-coordinates-x="58.912648" data-coordinates-y="11.931009" itemscope="" itemtype="http://schema.org/LocalBusiness">
+                                        <h3 class="vgr-search-list__headline">
+                                            <a href="#">Dals-Ed vaccinationsmottagning</a>
+                                        </h3>
+                                        <p class="vgr-visually-hidden">Tillhandahåller:</p>
+                                        
+                                        <div class="vgr-search-list__meta">
+                                                <p>
+                                                    <span class="vgr-search-list__meta-label">Adress:</span>
+                                                    <span>Hittepågatan 7</span>,
+                                                    <span>668 30</span>
+                                                    <span>Ed</span>
+                            
+                                                </p>
+                                                    <p class="vgr-search-list__distance">
+                                                        <img class="vgr-icon" alt="" src="https://www.vgregion.se/Static/gfx/ic_place_black_24px.svg">
+                                                        31.9 <abbr title="kilometer">km</abbr>
+                                                    </p>
+                                            <a href="#" class="maplink">Visa på karta</a>
+                            
+                                                <p>
+                                                    <span class="vgr-search-list__meta-label">Telefonnummer:</span>
+                                                    <a href="tel:010 - xxx xx xx">010 - xxx xx xx</a>
+                                                </p>
+                                                                <div class="vgr-toggle vgr-search-list__current" data-togglestyle="slide">
+                                                    <span class="vgr-search-list__meta-label">Öppettider: </span>
+                                                    <button type="button" class="vgr-toggle vgr-toggle__button" data-tab="" aria-controls="a9875281-0138-4dd0-88a7-387eb7d0b2c2" aria-expanded="false" data-isexpanded="false">
+                                                        <span class="vgr-visually-hidden" data-showtext="Visa information om öppettider" data-hidetext="Dölj information om öppettider">Visa information om öppettider</span>
+                                                        <span aria-hidden="true" class="vgr-search-list__closed">
+                                                            Öppet till 16:00
+                                                        </span>
+                                                        <img src="https://www.vgregion.se/Static/gfx/ic_expand_more_black_24px.svg" alt="">
+                                                    </button>
+                            
+                                                    <div class="vgr-toggle__panel" data-panel="" id="950829de-0528-4576-849e-e14f7ddb7efc" tabindex="-1" data-isexpanded="false">
+                                                        <dl>
+                                                                <dt>Tisdag</dt>
+                                                                <dd>08:00 - 16:00</dd>
+                                                                <dt class="vgr-search-list__hours--today">Onsdag</dt>
+                                                                <dd class="vgr-search-list__hours--today">08:00 - 16:00</dd>
+                                                                <dt>Torsdag</dt>
+                                                                <dd>08:00 - 16:00</dd>
+                                                        </dl>
+                                                    </div>
+                            
+                                                </div>
+                                        </div>
+                                    </li>
+                                    <li class="vgr-search-list__item" data-id="sokikiv-avd_SE2321000131-E000000009094" data-name="Mellerud vaccinationsmottagning" data-url="#" data-address="Norra Kungsgatan 3" data-phone="010 - xxx xx xx" data-coordinates-x="58.700022" data-coordinates-y="12.453802" itemscope="" itemtype="http://schema.org/LocalBusiness">
+                                        <h3 class="vgr-search-list__headline">
+                                            <a href="#">Mellerud vaccinationsmottagning</a>
+                                        </h3>
+                                        <p class="vgr-visually-hidden">Tillhandahåller:</p>
+                                        
+                                        <div class="vgr-search-list__meta">
+                                                <p>
+                                                    <span class="vgr-search-list__meta-label">Adress:</span>
+                                                    <span>Norra Hittepågatan 3</span>,
+                                                    <span>464 30</span>
+                                                    <span>Mellerud</span>
+                            
+                                                </p>
+                                                    <p class="vgr-search-list__distance">
+                                                        <img class="vgr-icon" alt="" src="https://www.vgregion.se/Static/gfx/ic_place_black_24px.svg">
+                                                        32.6 <abbr title="kilometer">km</abbr>
+                                                    </p>
+                                            <a href="#" class="maplink">Visa på karta</a>
+                            
+                                                <p>
+                                                    <span class="vgr-search-list__meta-label">Telefonnummer:</span>
+                                                    <a href="tel:010 - xxx xx xx">010 - xxx xx xx</a>
+                                                </p>
+                                                                <div class="vgr-toggle vgr-search-list__current" data-togglestyle="slide">
+                                                    <span class="vgr-search-list__meta-label">Öppettider: </span>
+                                                    <button type="button" class="vgr-toggle vgr-toggle__button" data-tab="" aria-controls="88ff17a6-f444-4b4b-b0e9-83a816eb6546" aria-expanded="false" data-isexpanded="false">
+                                                        <span class="vgr-visually-hidden" data-showtext="Visa information om öppettider" data-hidetext="Dölj information om öppettider">Visa information om öppettider</span>
+                                                        <span aria-hidden="true" class="vgr-search-list__closed">
+                                                            Stängt
+                                                        </span>
+                                                        <img src="https://www.vgregion.se/Static/gfx/ic_expand_more_black_24px.svg" alt="">
+                                                    </button>
+                            
+                                                    <div class="vgr-toggle__panel" data-panel="" id="f9343209-7f7a-4ace-b905-79886fb6e2e1" tabindex="-1" data-isexpanded="false">
+                                                        <dl>
+                                                                <dt>Måndag</dt>
+                                                                <dd>08:00 - 16:30</dd>
+                                                                <dt>Tisdag</dt>
+                                                                <dd>08:00 - 16:30</dd>
+                                                                <dt class="vgr-search-list__hours--today">Onsdag</dt>
+                                                                <dd class="vgr-search-list__hours--today">08:00 - 15:00</dd>
+                                                                <dt>Torsdag</dt>
+                                                                <dd>08:00 - 16:30</dd>
+                                                                <dt>Fredag</dt>
+                                                                <dd>08:00 - 12:00</dd>
+                                                                <dt>Fredag</dt>
+                                                                <dd>08:00 - 15:00</dd>
+                                                        </dl>
+                                                    </div>
+                            
+                                                </div>
+                                        </div>
+                                    </li>
+                                    <li class="vgr-search-list__item" data-id="sokikiv-avd_SE2321000131-E000000009089" data-name="Färgelanda vaccinationsmottagning" data-url="#" data-address="Håvestensvägen 5A" data-phone="010 - xxx xx xx" data-coordinates-x="58.561684" data-coordinates-y="11.995216" itemscope="" itemtype="http://schema.org/LocalBusiness">
+                                        <h3 class="vgr-search-list__headline">
+                                            <a href="#">Färgelanda vaccinationsmottagning</a>
+                                        </h3>
+                                        <p class="vgr-visually-hidden">Tillhandahåller:</p>
+                                        
+                                        <div class="vgr-search-list__meta">
+                                                <p>
+                                                    <span class="vgr-search-list__meta-label">Adress:</span>
+                                                    <span>Hittepågatan 5A</span>,
+                                                    <span>458 32</span>
+                                                    <span>Färgelanda</span>
+                            
+                                                </p>
+                                                    <p class="vgr-search-list__distance">
+                                                        <img class="vgr-icon" alt="" src="https://www.vgregion.se/Static/gfx/ic_place_black_24px.svg">
+                                                        55.1 <abbr title="kilometer">km</abbr>
+                                                    </p>
+                                            <a href="#" class="maplink">Visa på karta</a>
+                            
+                                                <p>
+                                                    <span class="vgr-search-list__meta-label">Telefonnummer:</span>
+                                                    <a href="tel:010 - xxx xx xx">010 - xxx xx xx</a>
+                                                </p>
+                                                                <div class="vgr-toggle vgr-search-list__current" data-togglestyle="slide">
+                                                    <span class="vgr-search-list__meta-label">Öppettider: </span>
+                                                    <button type="button" class="vgr-toggle vgr-toggle__button" data-tab="" aria-controls="0aab1012-94b4-4315-8a56-2a13f66a451d" aria-expanded="false" data-isexpanded="false">
+                                                        <span class="vgr-visually-hidden" data-showtext="Visa information om öppettider" data-hidetext="Dölj information om öppettider">Visa information om öppettider</span>
+                                                        <span aria-hidden="true" class="vgr-search-list__closed">
+                                                            Stängt
+                                                        </span>
+                                                        <img src="https://www.vgregion.se/Static/gfx/ic_expand_more_black_24px.svg" alt="">
+                                                    </button>
+                            
+                                                    <div class="vgr-toggle__panel" data-panel="" id="b84ece67-dd12-4312-989e-7be845875812" tabindex="-1" data-isexpanded="false">
+                                                        <dl>
+                                                                <dt>Måndag</dt>
+                                                                <dd>07:30 - 16:00</dd>
+                                                                <dt>Tisdag</dt>
+                                                                <dd>07:30 - 16:00</dd>
+                                                                <dt class="vgr-search-list__hours--today">Onsdag</dt>
+                                                                <dd class="vgr-search-list__hours--today">07:30 - 14:00</dd>
+                                                                <dt>Torsdag</dt>
+                                                                <dd>07:30 - 12:00</dd>
+                                                                <dt>Torsdag</dt>
+                                                                <dd>07:30 - 16:00</dd>
+                                                                <dt>Fredag</dt>
+                                                                <dd>07:30 - 14:00</dd>
+                                                        </dl>
+                                                    </div>
+                            
+                                                </div>
+                                        </div>
+                                    </li>
+                            </ul>
+                            <div id="map" name="map" class="vgr-search-result-map leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 9; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/fb3c80432560905ae9be32acbc5bc065/?SERVICE=WMTS&amp;REQUEST=GetTile&amp;VERSION=1.0.0&amp;LAYER=topowebb&amp;STYLE=default&amp;TILEMATRIXSET=3006&amp;TILEMATRIX=5&amp;TILEROW=60&amp;TILECOL=46&amp;FORMAT=image%2Fpng" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-101px, 253px, 0px); opacity: 1;"><img alt="" src="https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/fb3c80432560905ae9be32acbc5bc065/?SERVICE=WMTS&amp;REQUEST=GetTile&amp;VERSION=1.0.0&amp;LAYER=topowebb&amp;STYLE=default&amp;TILEMATRIXSET=3006&amp;TILEMATRIX=5&amp;TILEROW=60&amp;TILECOL=47&amp;FORMAT=image%2Fpng" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(155px, 253px, 0px); opacity: 1;"><img alt="" src="https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/fb3c80432560905ae9be32acbc5bc065/?SERVICE=WMTS&amp;REQUEST=GetTile&amp;VERSION=1.0.0&amp;LAYER=topowebb&amp;STYLE=default&amp;TILEMATRIXSET=3006&amp;TILEMATRIX=5&amp;TILEROW=59&amp;TILECOL=46&amp;FORMAT=image%2Fpng" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-101px, -3px, 0px); opacity: 1;"><img alt="" src="https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/fb3c80432560905ae9be32acbc5bc065/?SERVICE=WMTS&amp;REQUEST=GetTile&amp;VERSION=1.0.0&amp;LAYER=topowebb&amp;STYLE=default&amp;TILEMATRIXSET=3006&amp;TILEMATRIX=5&amp;TILEROW=59&amp;TILECOL=47&amp;FORMAT=image%2Fpng" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(155px, -3px, 0px); opacity: 1;"><img alt="" src="https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/fb3c80432560905ae9be32acbc5bc065/?SERVICE=WMTS&amp;REQUEST=GetTile&amp;VERSION=1.0.0&amp;LAYER=topowebb&amp;STYLE=default&amp;TILEMATRIXSET=3006&amp;TILEMATRIX=5&amp;TILEROW=61&amp;TILECOL=46&amp;FORMAT=image%2Fpng" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-101px, 509px, 0px); opacity: 1;"><img alt="" src="https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/fb3c80432560905ae9be32acbc5bc065/?SERVICE=WMTS&amp;REQUEST=GetTile&amp;VERSION=1.0.0&amp;LAYER=topowebb&amp;STYLE=default&amp;TILEMATRIXSET=3006&amp;TILEMATRIX=5&amp;TILEROW=61&amp;TILECOL=47&amp;FORMAT=image%2Fpng" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(155px, 509px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"><img src="https://www.vgregion.se/Scripts/LeafletMap/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(39px, 556px, 0px);"><img src="https://www.vgregion.se/Scripts/LeafletMap/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(252px, 444px, 0px);"><img src="https://www.vgregion.se/Scripts/LeafletMap/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(24px, 249px, 0px);"><img src="https://www.vgregion.se/Scripts/LeafletMap/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(375px, 146px, 0px);"><img src="https://www.vgregion.se/Scripts/LeafletMap/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(159px, 153px, 0px);"></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-marker-pane"><img src="https://www.vgregion.se/Scripts/LeafletMap/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" title="Clickable marker Färgelanda barnmorskemottagning" alt="Clickable marker Färgelanda barnmorskemottagning" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(39px, 556px, 0px); z-index: 556;"><img src="https://www.vgregion.se/Scripts/LeafletMap/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" title="Clickable marker Mellerud barnmorskemottagning" alt="Clickable marker Mellerud barnmorskemottagning" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(252px, 444px, 0px); z-index: 444;"><img src="https://www.vgregion.se/Scripts/LeafletMap/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" title="Clickable marker Dals-Ed barnmorskemottagning" alt="Clickable marker Dals-Ed barnmorskemottagning" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(24px, 249px, 0px); z-index: 249;"><img src="https://www.vgregion.se/Scripts/LeafletMap/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" title="Clickable marker Åmål barnmorskemottagning" alt="Clickable marker Åmål barnmorskemottagning" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(375px, 146px, 0px); z-index: 146;"><img src="https://www.vgregion.se/Scripts/LeafletMap/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" title="Clickable marker Bengtsfors barnmorskemottagning" alt="Clickable marker Bengtsfors barnmorskemottagning" tabindex="0" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(159px, 153px, 0px); z-index: 153;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(12069.5px, 15457.1px, 0px) scale(16);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in">+</a><a class="leaflet-control-zoom-out" href="#" title="Zoom out">-</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | © <a href="http://www.lantmateriet.se/en/">Lantmäteriet</a> Topografisk Webbkarta Visning, CCB</div></div></div></div>
+                            
+                            
+                            
+                            
                                     </div>
-                                        
-                                        
-                                        <b id="mottagning-count" aria-live="polite">Antal mottagningar: <!-- -->24</b>
-                                        
-                                        <ul class="list-component__ul" id="mottagningslista">
-                                            
-                                            <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="https://www.1177.se/Hitta-vard/Kontakt/?hsaid=SE2321000131-xxx" aria-describedby="SE2321000131-E000000007652"><h3 class="vgr-listitem__heading">Angereds närvårdscentral</h3></a>
-                                                <div id="SE2321000131-E000000007652" class="vgr-listitem__badge-wrapper">
-                                                    <div class="vgr-badge vgr-badge--info">Mer än 900 bokningsbara tider just nu</div>
-                                                    <div class="vgr-badge vgr-badge--success">Drop-in erbjuds vissa tider</div>
-                                                </div></header><footer>
-                                                    <p>Gårdstensgatan xx, Göteborg<br>
-                                                    Telefon: 031-xx xx xx<br>
-                                                    Dropin: Mån-fre kl 8-11</p>
-                                                    <p>Vaccination görs av flerspråkiga sjuksköterskor inne på vårdcentralen.</p>
-                                                <ul><li><a href="#">Boka tid via webben hos Angereds närvårdscentral</a></li></ul></footer></article></li>
-                                            <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#garda/" aria-describedby="SE2321000131-E000000007652"><h3 class="vgr-listitem__heading">Capio Gårda</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000007652" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">64 bokningsbara tider just nu</div></div></header><footer>
-                                                <ul><li><a href="#338dab69-ab30-11eb-a8eb-fa163e329242">Boka tid via webben hos Capio Gårda</a></li></ul></footer></article></li>
-                                                
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#kvillebacken/" aria-describedby="SE2321000131-E000000007603"><h3 class="vgr-listitem__heading">Capio Kvillebäcken</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000007603" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">Mer än 100 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#b1d9530d-74bd-11eb-b72c-c1de16d3e1eb">Boka tid via webben hos Capio Kvillebäcken</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#lundby/" aria-describedby="SE2321000131-E000000007620"><h3 class="vgr-listitem__heading">Capio Lundby</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000007620" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">37 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#1422d5a0-74bf-11eb-b72c-c1de16d3e1eb">Boka tid via webben hos Capio Lundby</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#selma/" aria-describedby="SE2321000131-E000000007615"><h3 class="vgr-listitem__heading">Capio Selma</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000007615" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">62 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#f2076616-74c3-11eb-b72c-c1de16d3e1eb">Boka tid via webben hos Capio Selma</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="https://www.dinklinik.se/" aria-describedby="SE2321000131-E000000016392"><h3 class="vgr-listitem__heading">Din Klinik vaccinationsmottagning Fridkullagatan27</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000016392" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--success">Drop-in erbjuds vissa tider</div><div class="vgr-badge vgr-badge--info">27 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#1735efd9-ad78-11eb-a8eb-fa163e329242">Boka tid via webben hos Din Klinik vaccinationsmottagning Fridkullagatan27</a></li><li><a href="https://www.dinklinik.se/Din-Klinik-Vaccinationsmottagning-Fridkullagatan-27">Drop-in tider hos <!-- -->Din Klinik vaccinationsmottagning Fridkullagatan27</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#" aria-describedby="SE2321000131-E000000014534"><h3 class="vgr-listitem__heading">Distriktsläkarna Kviberg</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000014534" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">47 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#a5acef14-9dba-11eb-a8eb-fa163e329242">Boka tid via webben hos Distriktsläkarna Kviberg</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#" aria-describedby="SE2321000131-E000000016315"><h3 class="vgr-listitem__heading">Drive In Nötkärnan Slottsskogen</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000016315" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--success">Drop-in erbjuds vissa tider</div><div class="vgr-badge vgr-badge--info">34 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#boka">Boka tid via webben hos Drive In Nötkärnan Slottsskogen</a></li><li><a href="#">Drop-in tider hos <!-- -->Drive In Nötkärnan Slottsskogen</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#carecenterid=19" aria-describedby="SE2321000131-E000000016677"><h3 class="vgr-listitem__heading">Göteborg Avenyn Vaccination</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000016677" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--success">Drop-in erbjuds vissa tider</div><div class="vgr-badge vgr-badge--info">Mer än 700 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#carecenterid=19">Boka tid via webben hos Göteborg Avenyn Vaccination</a></li><li><a href="#c19-vaccination-page/">Drop-in tider hos <!-- -->Göteborg Avenyn Vaccination</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#carecenterid=53" aria-describedby="SE2321000131-E000000016804"><h3 class="vgr-listitem__heading">Göteborg Gamlestaden, Medborgarhuset</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000016804" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--success">Drop-in erbjuds vissa tider</div><div class="vgr-badge vgr-badge--info">Mer än 500 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#carecenterid=53">Boka tid via webben hos Göteborg Gamlestaden, Medborgarhuset</a></li><li><a href="#c19-vaccination-page/">Drop-in tider hos <!-- -->Göteborg Gamlestaden, Medborgarhuset</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#covid-19-vaccination/goteborg-hedens/" aria-describedby="SE2321000131-E000000016411"><h3 class="vgr-listitem__heading">Legehuset Göteborg Hedens Evenemangsyta</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000016411" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">Mer än 1400 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#64d1591b-b718-11eb-91e2-fa163e329242">Boka tid via webben hos Legehuset Göteborg Hedens Evenemangsyta</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="http://lhkb.se/covid-19/" aria-describedby="SE2321000131-E000000014695"><h3 class="vgr-listitem__heading">Läkarhus Kyrkbyn</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000014695" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">Mer än 1700 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#make?configid=bb0225fc-7c37-47c1-8558-ddb991501c2c&amp;hsaid=SE2321000131-E000000014695">Boka tid via webben hos Läkarhus Kyrkbyn</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#Narhalsan-Gamlestadstorget-vardcentral-Goteborg/" aria-describedby="SE2321000131-E000000005063"><h3 class="vgr-listitem__heading">Närhälsan Gamlestadstorget vårdcentral</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000005063" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">Mer än 100 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#make?configid=bb0225fc-7c37-47c1-8558-ddb991501c2c&amp;hsaid=SE2321000131-E000000005063">Boka tid via webben hos Närhälsan Gamlestadstorget vårdcentral</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#hisingenvaccinationsmottagning" aria-describedby="SE2321000131-E000000007860"><h3 class="vgr-listitem__heading">Närhälsan Hisingen vaccinationsmottagning</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000007860" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">Mer än 200 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#make?configid=bb0225fc-7c37-47c1-8558-ddb991501c2c&amp;hsaid=SE2321000131-E000000007860">Boka tid via webben hos Närhälsan Hisingen vaccinationsmottagning</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#Narhalsan-Kungssten-vardcentral-Goteborg/" aria-describedby="SE2321000131-E000000006740"><h3 class="vgr-listitem__heading">Närhälsan Kungssten vårdcentral</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000006740" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">38 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#make?configid=bb0225fc-7c37-47c1-8558-ddb991501c2c&amp;hsaid=SE2321000131-E000000006740">Boka tid via webben hos Närhälsan Kungssten vårdcentral</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#Narhalsan-Lovgardet-vardcentral-Angered" aria-describedby="SE2321000131-E000000006726"><h3 class="vgr-listitem__heading">Närhälsan Lövgärdet vårdcentral</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000006726" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">8 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#make?configid=bb0225fc-7c37-47c1-8558-ddb991501c2c&amp;hsaid=SE2321000131-E000000006726">Boka tid via webben hos Närhälsan Lövgärdet vårdcentral</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#Narhalsan-Torpavallen-vardcentral-Goteborg/" aria-describedby="SE2321000131-E000000007248"><h3 class="vgr-listitem__heading">Närhälsan Torpavallen vårdcentral</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000007248" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">66 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#make?configid=bb0225fc-7c37-47c1-8558-ddb991501c2c&amp;hsaid=SE2321000131-E000000007248">Boka tid via webben hos Närhälsan Torpavallen vårdcentral</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#Omtanken-Vardcentral-Frolunda-Torg-Vastra-Frolunda/" aria-describedby="SE2321000131-E000000010009"><h3 class="vgr-listitem__heading">Omtanken Vårdcentral Frölunda Torg</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000010009" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">3 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#boka-tid/covid19-fas4/?unit=Omtanken_V%C3%A5rdcentral_Fr%C3%B6lunda_Torg">Boka tid via webben hos Omtanken Vårdcentral Frölunda Torg</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#Omtanken-Vardcentral-Jarnhalsan/" aria-describedby="SE2321000131-E000000015588"><h3 class="vgr-listitem__heading">Omtanken Vårdcentral Järnhälsan</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000015588" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">33 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#boka-tid/covid19-fas4/?unit=Omtanken_V%C3%A5rdcentral_J%C3%A4rnh%C3%A4lsan">Boka tid via webben hos Omtanken Vårdcentral Järnhälsan</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#Omtanken-Vardcentral-Landala-Goteborg/" aria-describedby="SE2321000131-E000000007644"><h3 class="vgr-listitem__heading">Omtanken Vårdcentral Landala</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000007644" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">14 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#boka-tid/covid19-fas4/?unit=Omtanken_V%C3%A5rdcentral_Landala">Boka tid via webben hos Omtanken Vårdcentral Landala</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#Ugglans-Vardcentral-Fredriksdal-Krokslatt/" aria-describedby="EPTIDBOK-12582"><h3 class="vgr-listitem__heading">Ugglans Vårdcentral Fredriksdal</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="EPTIDBOK-12582" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">4 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#make?childhsaid=EPTIDBOK-12582&amp;configid=bd621e4e-7f6d-41ea-8f8c-c359deca7d76&amp;hsaid=SE2321000131-E000000012582">Boka tid via webben hos Ugglans Vårdcentral Fredriksdal</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#covidvaccin/vastra-gotaland/" aria-describedby="SE2321000131-E000000016644"><h3 class="vgr-listitem__heading">Vaccina Göteborg</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000016644" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">24 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#covidvaccin/vastra-gotaland/tidsbokning/">Boka tid via webben hos Vaccina Göteborg</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#covidvaccin/vastra-gotaland/" aria-describedby="SE2321000131-100123456781"><h3 class="vgr-listitem__heading">Vaccina Landala</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-100123456781" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">Mer än 100 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#covidvaccin/vastra-gotaland/tidsbokning/">Boka tid via webben hos Vaccina Landala</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#vardcentralen-lakarhuset/start/" aria-describedby="SE2321000131-E000000007597"><h3 class="vgr-listitem__heading">Vårdcentralen Läkarhuset</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000007597" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">59 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#make?configid=879e211f-a494-4e32-8a2a-cb37b4112e95&amp;hsaid=SE2321000131-E000000007597">Boka tid via webben hos Vårdcentralen Läkarhuset</a></li></ul></footer></article></li>
-                                                <li><article class="vgr-listitem">                                                <header><a class="vgr-listitem__header-link" href="#" aria-describedby="SE2321000131-E000000007643"><h3 class="vgr-listitem__heading">Wästerläkarna</h3></a><h4 class="vgr-listitem__sub-heading">Göteborg kommun</h4><div id="SE2321000131-E000000007643" class="vgr-listitem__badge-wrapper"><div class="vgr-badge vgr-badge--info">47 bokningsbara tider just nu</div></div></header><footer><ul><li><a href="#37cebb89-595e-11eb-b72c-c1de16d3e1eb">Boka tid via webben hos Wästerläkarna</a></li></ul></footer></article></li></ul></form></div></div>
-                                            </div></div>
+                            </div>
+                            </div>
                                             
                                             <hr>
                                             
@@ -1453,18 +1691,21 @@
                                     // Listen for the event.
                                     document.addEventListener('scriptjs-ready', function (e) {
                                         // e.target matches document
-                                        $script('/bundles/js/public/common?v=bPDUZF38daAtJN9ezCY164knmumHt1412nr9YvF9eCE1', 'common');
+                        $script('https://vgregion.se/bundles/js/public/common?v=bPDUZF38daAtJN9ezCY164knmumHt1412nr9YvF9eCE1', 'common');
                                         /*--- Wait for common bundle ---*/
                                         $script.ready('common',
-                                        function () {
-                                            //init emailencoder
-                                            //TODO: can this be moved to main.js?
-                                            // ReSharper disable once InconsistentNaming
-                                            var smwee = new emailEncoder('/', false, false);
-                                            smwee.scanDocument();
-                                        });
+                                            function () {
+                                                //init emailencoder
+                                                //TODO: can this be moved to main.js?
+                                                // ReSharper disable once InconsistentNaming
+                                                var smwee = new emailEncoder('/', false, false);
+                                                smwee.scanDocument();
+                        
+                        $script('https://vgregion.se/bundles/js/public/map?v=Af1sjFzwxVZTpA0ryDLuIo0DGVpI2BWH1tdZmJJSfAg1', 'https://vgregion.se/bundles/js/public/map');
+                                            });
                                     }, false);
                                 </script>
+
                                 
                                 <!-- Loads required resources for Episerver Forms.
                                     Scripts are only loaded on pages with Epi Forms. -->
